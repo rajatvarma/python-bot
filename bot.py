@@ -3,7 +3,7 @@ import discord
 from lxml import etree
 from discord.ext.commands import Bot
 
-BOT_PREFIX = "!?"
+BOT_PREFIX = "^"
 TOKEN = 'NDkwNDQyNDg3ODQ0ODMxMjQ5.Dn5YHw.MW82PBMnAxm3QnhCON3-Q4WB_jA'
 
 client = Bot(command_prefix=BOT_PREFIX)
@@ -51,8 +51,18 @@ async def on_message(message):
     if message.content.startswith(BOT_PREFIX + 'unmute'):
         unmuted = message.raw_mentions
         await client.remove_roles(unmted, discord.utils.get(message.server.roles, name='Muted'))
-
-
+    if message.content.startswith(BOT_PREFIX + 'autism'):
+        cont = message.content.split(" ")
+        x = ""
+        print(cont[1])
+        i = 0
+        for char in cont[1]:
+            io = random.choice([0,1])
+            if io == 1:
+                x += char.upper()
+            else:
+                x += char
+        await client.send_message(message.channel, x)
 
 @client.event
 async def on_ready():
