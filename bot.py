@@ -1,6 +1,5 @@
 import random
 import discord
-from lxml import etree
 from discord.ext.commands import Bot
 
 BOT_PREFIX = "^"
@@ -63,6 +62,8 @@ async def on_message(message):
             else:
                 x += char
         await client.send_message(message.channel, x)
+    if message.content.startswith("@SlaVe") or message.content.startswith("@BotMan88#6889"):
+        await client.send_message(message.channel, "Yes?")
 
 @client.event
 async def on_ready():
