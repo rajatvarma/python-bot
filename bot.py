@@ -56,7 +56,7 @@ async def on_message(message):
         x = ""
         print(cont[1])
         i = 0
-        for char in cont[1]:
+        for char in cont[1:]:
             io = random.choice([0,1])
             if io == 1:
                 x += char.upper()
