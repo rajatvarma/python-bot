@@ -1,6 +1,5 @@
 import random
 import discord
-from lxml import etree
 from discord.ext.commands import Bot
 
 BOT_PREFIX = "^"
