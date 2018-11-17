@@ -1,5 +1,6 @@
 import random
 import discord
+from lxml import etree
 from discord.ext.commands import Bot
 
 BOT_PREFIX = "^"
@@ -19,20 +20,16 @@ async def on_message(message):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(BOT_PREFIX + 'eightball'):
-        banned_stuff = ['Rajat', 'rajat', 'RAJAT']
-        if banned_stuff[0] in message.content or banned_stuff[1] in message.content or banned_stuff[2] in message.content:
-            await client.send_message(message.channel, 'Shut up, {0.author.mention}'.format(message))   
-        else:
-            responses = ["Yes", "No", "Don't count on it...", "Chances are high...", "50/50, I'd say"]
-            msg = (random.choice(responses) + ', ' + '{0.author.mention}!').format(message)
-            await client.send_message(message.channel, msg)
+        responses = ["Yes", "No", "Don't count on it...", "Chances are high...", "50/50, I'd say"]
+        msg = (random.choice(responses) + ', ' + '{0.author.mention}!').format(message)
+        await client.send_message(message.channel, msg)
     if message.content.startswith(BOT_PREFIX + 'ileftfortnite'):
         msg = 'Wow {0.author.mention}! You increased your chances of getting laid by 1%!'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith(BOT_PREFIX + 'rank'):
         msg = 'Sorry, but ranking other than MEE6 is still under development!'
         await client.send_message(message.channel, msg)
-    if message.content.startswith(BOT_PREFIX + 'comms'):
+    if message.content.startswith(BOT_PREFIX + 'help'):
         msg = '''
         The commands available are:
             `!hello` : Greets the user
@@ -53,17 +50,17 @@ async def on_message(message):
     if message.content.startswith(BOT_PREFIX + 'autism'):
         cont = message.content.split(" ")
         x = ""
-        print(cont[1])
+        print(cont[1:])
         i = 0
         for char in cont[1:]:
-            io = random.choice([0,1])
-            if io == 1:
-                x += char.upper()
-            else:
+            if i & 2 == 0:
                 x += char
+            else:
+                x += char.upper()
+            i += 1
         await client.send_message(message.channel, x)
-    if message.content.startswith("@SlaVe") or message.content.startswith("@BotMan88#6889"):
-        await client.send_message(message.channel, "Yes?")
+    if message.content.upper() == "ALEXA, PLAY DESPACITO":
+        await client.send_message(message.channel, '''Despacito Quiero respirar tu cuello despacito Deja que te diga cosas al oído Para que te acuerdes si no estás conmigo Despacito Quiero desnudarte a besos despacito Firmo en las paredes de tu laberinto''', tts=True)
 
 @client.event
 async def on_ready():
