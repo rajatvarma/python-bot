@@ -1,5 +1,4 @@
 import random
-import time
 import discord
 
 from discord.ext.commands import Bot
