@@ -1,5 +1,5 @@
 import random
-import discord.py as discord
+import discord
 from discord.ext.commands import Bot
 
 BOT_PREFIX = "^"
