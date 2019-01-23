@@ -1,2 +1,2 @@
 worker: python bot.py
-web: slave.html
+web: strix.html
