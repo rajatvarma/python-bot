@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Strix: Modern Construction Parts</title>
+		<link rel="stylesheet" type="text/css" href="strix.css">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="https://github.com/juliangarnier/anime/blob/master/lib/anime.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	</head>
+	<body>
+		<div class="navbar">
+				<a class="mainheading" href="#landing" style="display: inline-grid;">strix</a>
+				<a href="#about">About Us</a>
+				<a href="#parts">Our Products</a>
+				<a href="#advert">Reviews</a>
+  				<a href="mailto:info@strix.com">Contact</a>
+		</div>
+		<div class="container">
+			<section id="landing">
+				<h1 class="heading">STRIX INC.</h1>
+				<h3>Advanced. Green. Inexpensive.</h3>
+				<div class="info">
+							At Strix, we strive to make construction more eco-friendly, with our range of modular, functional construction items.<br><br>
+							We ensure that your home/office is not only comfortable, functional and safe, but also contributes to a healthy environment.
+				</div>
+				<p class="arrow" style="cursor: default;"><font color="#fff"><b>&gt;</b></font></p>
+			</section>
+			<section id="about">
+				<div class="holder">
+					<div>
+						<h1>What is Strix?</h1>
+						<hr>
+					</div>
+					<div class="answer">
+						<!--<div id="dyk">Did You Know?<br><br>
+						The construction of an average 20 storey building usually consumes <font color = red>60 million litres of water</font>, and releases an average of <font color="red"> 200 tonnes of CO<sub>2</sub></font> and disposes off <font color="red">35 tonnes</font> of toxic wastes and rubble.<br><br><br><br>-->
+						<div>
+							<img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDk2IDQ5NiIgd2lkdGg9IjUxMnB4Ij48cGF0aCBkPSJtNDg4IDI0OGMwIDE3LjY3MTg3NS0xNC4zMjgxMjUgMzItMzIgMzJzLTMyLTE0LjMyODEyNS0zMi0zMiAxNC4zMjgxMjUtMzIgMzItMzIgMzIgMTQuMzI4MTI1IDMyIDMyem0wIDAiIGZpbGw9IiNmMTk4NTAiLz48cGF0aCBkPSJtMjgwIDQ1NmMwIDE3LjY3MTg3NS0xNC4zMjgxMjUgMzItMzIgMzJzLTMyLTE0LjMyODEyNS0zMi0zMiAxNC4zMjgxMjUtMzIgMzItMzIgMzIgMTQuMzI4MTI1IDMyIDMyem0wIDAiIGZpbGw9IiM1ZGEzNTEiLz48cGF0aCBkPSJtNzIgMjQ4YzAgMTcuNjcxODc1LTE0LjMyODEyNSAzMi0zMiAzMnMtMzItMTQuMzI4MTI1LTMyLTMyIDE0LjMyODEyNS0zMiAzMi0zMiAzMiAxNC4zMjgxMjUgMzIgMzJ6bTAgMCIgZmlsbD0iI2JkM2Q0NyIvPjxwYXRoIGQ9Im0yODAgNDBjMCAxNy42NzE4NzUtMTQuMzI4MTI1IDMyLTMyIDMycy0zMi0xNC4zMjgxMjUtMzItMzIgMTQuMzI4MTI1LTMyIDMyLTMyIDMyIDE0LjMyODEyNSAzMiAzMnptMCAwIiBmaWxsPSIjNGE5OGM1Ii8+PHBhdGggZD0ibTQ0MCAzNjAtODAgODAtMzM1LjQzMzU5NC0zMzUuNDMzNTk0Yy0xMC42MDU0NjgtMTAuNjA1NDY4LTE2LjU2NjQwNi0yNS0xNi41NjY0MDYtNDAgMC0zMS4yMzgyODEgMjUuMzI4MTI1LTU2LjU2NjQwNiA1Ni41NjY0MDYtNTYuNTY2NDA2IDE1IDAgMjkuMzk0NTMyIDUuOTYwOTM4IDQwIDE2LjU2NjQwNnptMCAwIiBmaWxsPSIjYmZiZmJmIi8+PHBhdGggZD0ibTMyIDQwLjU2NjQwNmMwLTkuNDM3NSAyLjM0Mzc1LTE4LjMwODU5NCA2LjQzMzU5NC0yNi4xMzI4MTIgNy44MjQyMTgtNC4wODk4NDQgMTYuNjk1MzEyLTYuNDMzNTk0IDI2LjEzMjgxMi02LjQzMzU5NCAxNSAwIDI5LjM5NDUzMiA1Ljk2MDkzOCA0MCAxNi41NjY0MDZsMzM1LjQzMzU5NCAzMzUuNDMzNTk0LTU2IDU2LTMzNS40MzM1OTQtMzM1LjQzMzU5NGMtMTAuNjA1NDY4LTEwLjYwNTQ2OC0xNi41NjY0MDYtMjUtMTYuNTY2NDA2LTQwem0wIDAiIGZpbGw9IiNlOGU4ZTgiLz48cGF0aCBkPSJtNzEuOTk2MDk0IDE1Mi4wMDM5MDYgMzkuOTk2MDk0LTQwIDI4OCAyODgtNDAgMzkuOTk2MDk0em0wIDAiIGZpbGw9IiNmMTk4NTAiLz48cGF0aCBkPSJtMTExLjk5NjA5NCAxMTIuMDAzOTA2IDM5Ljk5NjA5NC00MCAyODggMjg4LTQwIDM5Ljk5NjA5NHptMCAwIiBmaWxsPSIjZjViNDY1Ii8+PHBhdGggZD0ibTQ4IDEyOCA3OS45OTYwOTQtODAgMjguMDAzOTA2IDI4LTgwIDgwem0wIDAiIGZpbGw9IiNhMzZkNTYiLz48cGF0aCBkPSJtNzEuOTk2MDk0IDEwNCA1NS45OTYwOTQtNTUuOTk2MDk0IDI4LjAwMzkwNiAyOC01NS45OTYwOTQgNTUuOTk2MDk0em0wIDAiIGZpbGw9IiNiNDdlNjciLz48cGF0aCBkPSJtNDQwIDM2MCA0OCAxMjgtMTI4LTQ4IiBmaWxsPSIjYTM2ZDU2Ii8+PHBhdGggZD0ibTM4NCA0MTYgNTYtNTYgMzMuNjAxNTYyIDg5LjYwMTU2MnptMCAwIiBmaWxsPSIjYjQ3ZTY3Ii8+PHBhdGggZD0ibTQ4OCA0ODgtODEuNDU3MDMxLTMwLjU0Mjk2OSA1MC45MTQwNjItNTAuOTE0MDYyem0wIDAiIGZpbGw9IiM0MDQwNDAiLz48cGF0aCBkPSJtNDMwLjU0Mjk2OSA0MzMuNDU3MDMxIDI2LjkxNDA2Mi0yNi45MTQwNjIgMTYuMTQ0NTMxIDQzLjA1ODU5M3ptMCAwIiBmaWxsPSIjNGQ0ZDRkIi8+PHBhdGggZD0ibTU2IDM2MCA4MCA4MCAzMzUuNDMzNTk0LTMzNS40MzM1OTRjMTAuNjA1NDY4LTEwLjYwNTQ2OCAxNi41NjY0MDYtMjUgMTYuNTY2NDA2LTQwIDAtMzEuMjM4MjgxLTI1LjMyODEyNS01Ni41NjY0MDYtNTYuNTY2NDA2LTU2LjU2NjQwNi0xNSAwLTI5LjM5NDUzMiA1Ljk2MDkzOC00MCAxNi41NjY0MDZ6bTAgMCIgZmlsbD0iI2JmYmZiZiIvPjxwYXRoIGQ9Im00NjQgNDAuNTY2NDA2YzAtOS40Mzc1LTIuMzQzNzUtMTguMzA4NTk0LTYuNDMzNTk0LTI2LjEzMjgxMi03LjgyNDIxOC00LjA4OTg0NC0xNi42OTUzMTItNi40MzM1OTQtMjYuMTMyODEyLTYuNDMzNTk0LTE1IDAtMjkuMzk0NTMyIDUuOTYwOTM4LTQwIDE2LjU2NjQwNmwtMzM1LjQzMzU5NCAzMzUuNDMzNTk0IDU2IDU2IDMzNS40MzM1OTQtMzM1LjQzMzU5NGMxMC42MDU0NjgtMTAuNjA1NDY4IDE2LjU2NjQwNi0yNSAxNi41NjY0MDYtNDB6bTAgMCIgZmlsbD0iI2U4ZThlOCIvPjxwYXRoIGQ9Im05NS45OTIxODggMzk5Ljk5NjA5NCAyODgtMjg3Ljk5NjA5NCA0MCAzOS45OTYwOTQtMjg4IDI4OHptMCAwIiBmaWxsPSIjZjE5ODUwIi8+PHBhdGggZD0ibTU1Ljk5NjA5NCAzNTkuOTk2MDk0IDI4Ny45OTYwOTQtMjg3Ljk5NjA5NCA0MCAzOS45OTYwOTQtMjg4IDI4OHptMCAwIiBmaWxsPSIjZjViNDY1Ii8+PHBhdGggZD0ibTMzOS45OTYwOTQgNzYuMDAzOTA2IDI4LjAwMzkwNi0yOCA3OS45OTYwOTQgNzkuOTk2MDk0LTI4IDI4em0wIDAiIGZpbGw9IiNhMzZkNTYiLz48cGF0aCBkPSJtMzM5Ljk5NjA5NCA3NiAyOC0yOCA1NS45OTYwOTQgNTUuOTk2MDk0LTI4IDI4LjAwMzkwNnptMCAwIiBmaWxsPSIjYjQ3ZTY3Ii8+PHBhdGggZD0ibTU2IDM2MC00OCAxMjggMTI4LTQ4IiBmaWxsPSIjYTM2ZDU2Ii8+PHBhdGggZD0ibTExMiA0MTYtNTYtNTYtMzMuNjAxNTYyIDg5LjYwMTU2MnptMCAwIiBmaWxsPSIjYjQ3ZTY3Ii8+PHBhdGggZD0ibTggNDg4IDgxLjQ1NzAzMS0zMC41NDI5NjktNTAuOTE0MDYyLTUwLjkxNDA2MnptMCAwIiBmaWxsPSIjNDA0MDQwIi8+PHBhdGggZD0ibTY1LjQ1NzAzMSA0MzMuNDU3MDMxLTI2LjkxNDA2Mi0yNi45MTQwNjItMTYuMTQ0NTMxIDQzLjA1ODU5M3ptMCAwIiBmaWxsPSIjNGQ0ZDRkIi8+PHBhdGggZD0ibTM2Mi4zMzk4NDQgNTMuNjYwMTU2IDExLjMxNjQwNi0xMS4zMTI1IDc5Ljk5NjA5NCA3OS45OTYwOTQtMTEuMzEyNSAxMS4zMTY0MDZ6bTAgMCIvPjxwYXRoIGQ9Im0zMzAuMzM5ODQ0IDc3LjY2MDE1NiAxMS4zMTY0MDYtMTEuMzEyNSA4Ny45OTYwOTQgODcuOTk2MDk0LTExLjMxMjUgMTEuMzEyNXptMCAwIi8+PHBhdGggZD0ibTEzNiA0NDhjLTIuMDQ2ODc1IDAtNC4wOTc2NTYtLjc4NTE1Ni01LjY1NjI1LTIuMzQzNzVsLTgwLTgwYy0zLjEyODkwNi0zLjEyODkwNi0zLjEyODkwNi04LjE4MzU5NCAwLTExLjMxMjVsMzM1LjQzMzU5NC0zMzUuNDMzNTk0YzEyLjE5MTQwNi0xMi4xOTE0MDYgMjguNDA2MjUtMTguOTEwMTU2IDQ1LjY1NjI1LTE4LjkxMDE1NiAzNS41OTc2NTYgMCA2NC41NjY0MDYgMjguOTY4NzUgNjQuNTY2NDA2IDY0LjU2NjQwNiAwIDE3LjI1LTYuNzE4NzUgMzMuNDY0ODQ0LTE4LjkxMDE1NiA0NS42NTYyNWwtMzM1LjQzMzU5NCAzMzUuNDMzNTk0Yy0xLjU1ODU5NCAxLjU1ODU5NC0zLjYwOTM3NSAyLjM0Mzc1LTUuNjU2MjUgMi4zNDM3NXptLTY4LjY4NzUtODggNjguNjg3NSA2OC42ODc1IDMyOS43NzczNDQtMzI5Ljc3NzM0NGM5LjE3NTc4MS05LjE3NTc4MSAxNC4yMjI2NTYtMjEuMzY3MTg3IDE0LjIyMjY1Ni0zNC4zNDM3NSAwLTI2Ljc3MzQzNy0yMS43OTI5NjktNDguNTY2NDA2LTQ4LjU2NjQwNi00OC41NjY0MDYtMTIuOTc2NTYzIDAtMjUuMTY3OTY5IDUuMDQ2ODc1LTM0LjM0Mzc1IDE0LjIyMjY1NnptMCAwIi8+PHBhdGggZD0ibTggNDk2Yy0yLjA3ODEyNSAwLTQuMTI4OTA2LS44MTY0MDYtNS42NTYyNS0yLjM0Mzc1LTIuMjE0ODQ0LTIuMjE0ODQ0LTIuOTM3NS01LjUyNzM0NC0xLjgzMjAzMS04LjQ3MjY1Nmw0OC0xMjggMTQuOTg0Mzc1IDUuNjI1LTQxLjgyNDIxOSAxMTEuNTE5NTMxIDExMS41MTk1MzEtNDEuODI0MjE5IDUuNjE3MTg4IDE0Ljk4NDM3NS0xMjggNDhjLS45MTQwNjMuMzQzNzUtMS44NjMyODIuNTExNzE5LTIuODA4NTk0LjUxMTcxOXptMCAwIi8+PHBhdGggZD0ibTM0LjMzOTg0NCA0MTMuNjUyMzQ0IDExLjMxMjUtMTEuMzEyNSA0Ny45OTYwOTQgNDcuOTk2MDk0LTExLjMxMjUgMTEuMzE2NDA2em0wIDAiLz48cGF0aCBkPSJtOTAuMzM5ODQ0IDM5NC4zNDM3NSAyODgtMjg4IDExLjMxMjUgMTEuMzEyNS0yODggMjg4em0wIDAiLz48cGF0aCBkPSJtNDIuMzQzNzUgMTIyLjM0Mzc1IDc5Ljk5NjA5NC04MCAxMS4zMTY0MDYgMTEuMzEyNS04MCA4MHptMCAwIi8+PHBhdGggZD0ibTY2LjM0Mzc1IDE1NC4zMzk4NDQgODcuOTk2MDk0LTg3Ljk5NjA5NCAxMS4zMTI1IDExLjMxNjQwNi04Ny45OTYwOTQgODcuOTk2MDk0em0wIDAiLz48cGF0aCBkPSJtMzYwIDQ0OGMtMi4wNDY4NzUgMC00LjA5NzY1Ni0uNzg1MTU2LTUuNjU2MjUtMi4zNDM3NWwtMTEyLTExMiAxMS4zMTI1LTExLjMxMjUgMTA2LjM0Mzc1IDEwNi4zNDM3NSA2OC42ODc1LTY4LjY4NzUtMTA2LjM0Mzc1LTEwNi4zNDM3NSAxMS4zMTI1LTExLjMxMjUgMTEyIDExMmMzLjEyODkwNiAzLjEyODkwNiAzLjEyODkwNiA4LjE4MzU5NCAwIDExLjMxMjVsLTgwIDgwYy0xLjU1ODU5NCAxLjU1ODU5NC0zLjYwOTM3NSAyLjM0Mzc1LTUuNjU2MjUgMi4zNDM3NXptMCAwIi8+PHBhdGggZD0ibTE2Mi4zNDM3NSAyNTMuNjU2MjUtMTQzLjQzMzU5NC0xNDMuNDMzNTk0Yy0xMi4xOTE0MDYtMTIuMTkxNDA2LTE4LjkxMDE1Ni0yOC40MDYyNS0xOC45MTAxNTYtNDUuNjU2MjUgMC0zNS41OTc2NTYgMjguOTY4NzUtNjQuNTY2NDA2IDY0LjU2NjQwNi02NC41NjY0MDYgMTcuMjUgMCAzMy40NjQ4NDQgNi43MTg3NSA0NS42NTYyNSAxOC45MTAxNTZsMTQzLjQzMzU5NCAxNDMuNDMzNTk0LTExLjMxMjUgMTEuMzEyNS0xNDMuNDMzNTk0LTE0My40MzM1OTRjLTkuMTc1NzgxLTkuMTc1NzgxLTIxLjM2NzE4Ny0xNC4yMjI2NTYtMzQuMzQzNzUtMTQuMjIyNjU2LTI2Ljc3MzQzNyAwLTQ4LjU2NjQwNiAyMS43OTI5NjktNDguNTY2NDA2IDQ4LjU2NjQwNiAwIDEyLjk3NjU2MyA1LjA0Njg3NSAyNS4xNjc5NjkgMTQuMjIyNjU2IDM0LjM0Mzc1bDE0My40MzM1OTQgMTQzLjQzMzU5NHptMCAwIi8+PHBhdGggZD0ibTQ4OCA0OTZjLS45NDUzMTIgMC0xLjg5NDUzMS0uMTY3OTY5LTIuODA4NTk0LS41MDM5MDZsLTEyOC00OCA1LjYxNzE4OC0xNC45ODQzNzUgMTExLjUxOTUzMSA0MS44MjQyMTktNDEuODI0MjE5LTExMS41MTE3MTkgMTQuOTg0Mzc1LTUuNjI1IDQ4IDEyOGMxLjEwNTQ2OSAyLjkzNzUuMzgyODEzIDYuMjUtMS44MzIwMzEgOC40NzI2NTYtMS41MjczNDQgMS41MTE3MTktMy41NzgxMjUgMi4zMjgxMjUtNS42NTYyNSAyLjMyODEyNXptMCAwIi8+PHBhdGggZD0ibTQwMi4zMzU5MzggNDUwLjM0Mzc1IDQ3Ljk5NjA5My00Ny45OTYwOTQgMTEuMzE2NDA3IDExLjMxMjUtNDggNDh6bTAgMCIvPjxwYXRoIGQ9Im0yODIuMzM5ODQ0IDI5My42NjAxNTYgMTEuMzE2NDA2LTExLjMxMjUgMTEyIDExMS45OTYwOTQtMTEuMzE2NDA2IDExLjMxNjQwNnptMCAwIi8+PHBhdGggZD0ibTEwNi4zNDM3NSAxMTcuNjYwMTU2IDExLjMxMjUtMTEuMzE2NDA2IDk2IDk2LjAwMzkwNi0xMS4zMTI1IDExLjMxMjV6bTAgMCIvPjxwYXRoIGQ9Im00MjkuNjU2MjUgMTA5LjY1NjI1LTExLjMxMjUtMTEuMzEyNSAyNS4zNjcxODgtMjUuMzY3MTg4YzIuNzY5NTMxLTIuNzY5NTMxIDQuMjg5MDYyLTYuNDQxNDA2IDQuMjg5MDYyLTEwLjM0Mzc1IDAtOC4wNzQyMTgtNi41NTg1OTQtMTQuNjMyODEyLTE0LjYzMjgxMi0xNC42MzI4MTJoLTEuMzY3MTg4di0xNmgxLjM2NzE4OGMxNi44OTg0MzcgMCAzMC42MzI4MTIgMTMuNzM0Mzc1IDMwLjYzMjgxMiAzMC42MzI4MTIgMCA4LjE3NTc4Mi0zLjE4MzU5NCAxNS44NzEwOTQtOC45NzY1NjIgMjEuNjU2MjV6bTAgMCIvPjxwYXRoIGQ9Im02Ni4zNDM3NSAxMDkuNjU2MjUtMjUuMzY3MTg4LTI1LjM2NzE4OGMtNS43OTI5NjgtNS43OTI5NjgtOC45NzY1NjItMTMuNDgwNDY4LTguOTc2NTYyLTIxLjY1NjI1IDAtMTYuODk4NDM3IDEzLjczNDM3NS0zMC42MzI4MTIgMzAuNjMyODEyLTMwLjYzMjgxMmgxLjM2NzE4OHYxNmgtMS4zNjcxODhjLTguMDc0MjE4IDAtMTQuNjMyODEyIDYuNTU4NTk0LTE0LjYzMjgxMiAxNC42MzI4MTIgMCAzLjkwMjM0NCAxLjUxOTUzMSA3LjU3NDIxOSA0LjI4OTA2MiAxMC4zNDM3NWwyNS4zNjcxODggMjUuMzY3MTg4em0wIDAiLz48cGF0aCBkPSJtMjQ4IDgwYy0yMi4wNTQ2ODggMC00MC0xNy45NDUzMTItNDAtNDBzMTcuOTQ1MzEyLTQwIDQwLTQwIDQwIDE3Ljk0NTMxMiA0MCA0MC0xNy45NDUzMTIgNDAtNDAgNDB6bTAtNjRjLTEzLjIzMDQ2OSAwLTI0IDEwLjc2OTUzMS0yNCAyNHMxMC43Njk1MzEgMjQgMjQgMjQgMjQtMTAuNzY5NTMxIDI0LTI0LTEwLjc2OTUzMS0yNC0yNC0yNHptMCAwIi8+PHBhdGggZD0ibTI0OCA0OTZjLTIyLjA1NDY4OCAwLTQwLTE3Ljk0NTMxMi00MC00MHMxNy45NDUzMTItNDAgNDAtNDAgNDAgMTcuOTQ1MzEyIDQwIDQwLTE3Ljk0NTMxMiA0MC00MCA0MHptMC02NGMtMTMuMjMwNDY5IDAtMjQgMTAuNzY5NTMxLTI0IDI0czEwLjc2OTUzMSAyNCAyNCAyNCAyNC0xMC43Njk1MzEgMjQtMjQtMTAuNzY5NTMxLTI0LTI0LTI0em0wIDAiLz48cGF0aCBkPSJtNDAgMjg4Yy0yMi4wNTQ2ODggMC00MC0xNy45NDUzMTItNDAtNDBzMTcuOTQ1MzEyLTQwIDQwLTQwIDQwIDE3Ljk0NTMxMiA0MCA0MC0xNy45NDUzMTIgNDAtNDAgNDB6bTAtNjRjLTEzLjIzMDQ2OSAwLTI0IDEwLjc2OTUzMS0yNCAyNHMxMC43Njk1MzEgMjQgMjQgMjQgMjQtMTAuNzY5NTMxIDI0LTI0LTEwLjc2OTUzMS0yNC0yNC0yNHptMCAwIi8+PHBhdGggZD0ibTQ1NiAyODhjLTIyLjA1NDY4OCAwLTQwLTE3Ljk0NTMxMi00MC00MHMxNy45NDUzMTItNDAgNDAtNDAgNDAgMTcuOTQ1MzEyIDQwIDQwLTE3Ljk0NTMxMiA0MC00MCA0MHptMC02NGMtMTMuMjMwNDY5IDAtMjQgMTAuNzY5NTMxLTI0IDI0czEwLjc2OTUzMSAyNCAyNCAyNCAyNC0xMC43Njk1MzEgMjQtMjQtMTAuNzY5NTMxLTI0LTI0LTI0em0wIDAiLz48cGF0aCBkPSJtMjQwIDcyaDE2djk2aC0xNnptMCAwIi8+PHBhdGggZD0ibTI0MCAzMjhoMTZ2OTZoLTE2em0wIDAiLz48cGF0aCBkPSJtMzI4IDI0MGg5NnYxNmgtOTZ6bTAgMCIvPjxwYXRoIGQ9Im03MiAyNDBoOTZ2MTZoLTk2em0wIDAiLz48L3N2Zz4K" align="right" width="250px" height="250px" style="margin-left: 50px;">
+						</div>
+						<h3>Strix is a Gurgaon based startup launched in 2017, that was created by the efforts of the renowned architect and environmental activist Taylor Sharma. After having many sucessful projects, Strix is a pround recipient of the <font color="#AA5">ECO-FRIENDLY CONSTRUCTERS</font> award given by the UN.</h3>
+						<br><br>
+						<hr>
+						<h3><font color="black" face="Quicksand">Even though Strix has grown from a small startup to a large manufacturer, it has not affected the quality of our products and the integrity of our organisation. We will always be commited to making your home / office as environment friendly as possible.</font></h3>
+					</div>
+				</div>
+			</section>
+			<section id="parts">
+				<h2 style="font-size: 2.5rem; color: #ff5252;">Our Range Of New Eco-Friendly Products:</h2>
+				<div class="part">
+					<h2>
+						Geopolymer&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="opener1">+</span>
+						<span class="closer1" style="cursor: pointer; display: inline-grid;">_</span>
+					</h2>
+					<div class="partholder1">
+						<div class="exp">
+							<p style="margin-right: 250px;">
+								Geopolymer is an adhesive that can used as an alternative to cement, which 	also offers resistance against corrosion and damage from fires, water and CO<sub>2</sub> exposure.<br>
+								Geopolymer uses micro-polymer adhesive technology, developed at Strix, which makes it super strong and nearly unbreakable. 
+
+								Geopolymer also reduces the amount of water consumed, while affecting neither its consitency nor its efficiency as an adhesive. 
+
+							</p>
+							
+							<div class="demo">
+								<img src="Geopolymer.png" align="right">
+							</div>
+							<br><br>
+							<table id="compare">
+								<caption style="font-size: 1.25rem; color: #FFF; margin-bottom: 10px;">Geopolymer vs Portland (conventional) Cement</caption> 
+								<tr>
+									<th>Factor</th>
+									<th>Geopolymer</th>
+									<th>Portland Cement</th>
+								</tr>
+								<tr>
+									<th>CO<sub>2</sub> Emmision</th>
+									<td bgcolor="green">100%</td>
+									<td bgcolor="red">20%</td>
+								</tr>
+								<tr>
+									<th>Energy Consumption</th>
+									<td bgcolor="green">100%</td>
+									<td bgcolor="red">30%</td>
+								</tr>
+								<tr>
+									<th>Water consumption</th>
+									<td bgcolor="green">100%</td>
+									<td bgcolor="red">~35%</td>
+								</tr>
+							</table>
+						</div>
+							
+			
+					</div>
+				</div>
+				<div class="part">
+					<h2>
+						HelioWindows&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="opener2">+</span>
+						<span class="closer2" style="cursor: pointer; display: inline-grid;">_</span>
+					</h2>
+					<div class="partholder2">							
+						<div class="exp">
+							<div class="demo" bgcolor="cyan">
+								<img src="solarwin.png" height="350px" width="350px" align="right" style="margin-left: 10px;">
+							</div>
+							HelioWindows are panels of glass with an attached layer of ultra thin solar cell film.<br><br>
+							These panels of glass are made to order and can be used for buildings with heights upto 200m.<br><br>
+							The film serves two functions, blocking out excess sunlight, and using the sunlight for generating electricity.<br><br>
+							Each solar cell can generate upto 250MW of electricity, because of the new double mirror heat trapping technology, developed at Strix. 
+							
+						</div>
+					</div>
+				</div>
+				<div class="part">
+					<h2>
+						SynWood&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="opener3">+</span>
+						<span class="closer3" style="cursor: pointer; display: inline-grid;">_</span>
+					</h2>
+					<div class="partholder3">
+						<div class="exp">
+							<div class="demo">
+								<img src="SynWood.png" height="200px" width="200px" align="right" style="margin-left: 10px;">
+							</div>
+							Plywood is one the most used construction materials nowadays. Each building has about 10 tonnes of plywood in it. That means about 1000 trees are cut for each construction project.
+							<br><br>
+							Strix has developed a new synthetic mix of organic materials, a plywood alternative, providing better strength along with protection against damage by water, termites and fires. 
+							<br> <br>
+							This would not only save millions of trees, but also provide a better aesthetic appeal to the building, allowed by easy customization and hassle-free polishing.<br><br>
+							<table id="compare">
+								<caption style="font-size: 1.25rem; color: #FFF; margin-bottom: 10px;">SynWood v/s Conventional Plywood</caption> 
+								<tr>
+									<th>Factor</th>
+									<th>SynWood</th>
+									<th>Plywood</th>
+								</tr>
+								<tr>
+									<th>Damage by water</th>
+									<td bgcolor="green">Water Resistant</td>
+									<td bgcolor="red">Vulnerable</td>
+								</tr>
+								<tr>
+									<th>Damage by pests</th>
+									<td bgcolor="green">Pest Resistant</td>
+									<td bgcolor="red">Vulnerable</td>
+								</tr>
+								<tr>
+									<th>Strength</th>
+									<td bgcolor="green">Handles loads upto 3 tonnes</td>
+									<td bgcolor="red">Cannot handle high loads</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<br><br><br><br>
+			</section>
+			<section id="advert">
+				<h3 style="color: #ff5252; font-size: 2.5rem;">Testimonials by happy customers</h3>
+				<div class="slideshow-container">
+					<div class="slide">
+						<div class="quotes">
+							<h2>"I never realized how environmentally damaging my companies' offices were until Strix helped to renovate them and make them so eco-friendly!🔥🔥🔥"</h2>
+							<h3> - Elon Musk</h3>
+						</div>
+					</div>
+
+					<div class="slide">
+						<div class="quotes">
+							<h2>"Strix has truly lived up to my expectations, by delivering efficient solutions for my home"</h2>
+							<h3> - Actual Customer</h3>
+						</div>
+					</div>
+
+					<div class="slide">
+						<div class="quotes">
+							<h2>"Strix built my new upgraded bunker and they will now also build the wall on the border.💯💯💯"</h2>
+							<h3> - Donald Trump</h3>
+						</div>
+					</div>
+
+					<div class="slide">
+						<div class="quotes">
+							<h2>"Don't just fix it, you should Strix it!👌👌👌"</h2>
+							<h3> - Brock Obama</h3>
+						</div>
+					</div>
+
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span> 
+						<span class="dot" onclick="currentSlide(2)"></span> 
+						<span class="dot" onclick="currentSlide(3)"></span> 
+						<span class="dot" onclick="currentSlide(4)"></span> 
+					</div>
+				</div>
+				<br><br><br>
+				<p style="text-align: center; font-weight: bolder; font-size: 2rem;">These are just few of the satisfied customers who have used Strix's services and will never regret it. To join this happy community, contact Strix now and find out more about our services and products.</p>
+			</section>
+			<hr>
+			<center id="disclaimer"><font color="#ff5252" face="Raleway">Developed by Rajat Varma, 10E.<br>All rights reserved by Strix Inc. &copy; 2018</font></center>
+		</div>
+		<script>
+			jQuery(".partholder1").hide();
+			jQuery(".closer1").hide();
+			jQuery(".partholder2").hide();
+			jQuery(".closer2").hide();
+			jQuery(".partholder3").hide();
+			jQuery(".closer3").hide();
+			jQuery(document).scroll(function(){
+				var scroll = jQuery(window).scrollTop();
+				var scroll2 = 100 - (scroll/2);
+				if (scroll2 >= 50){
+					jQuery(".navbar").css({'background-color': '#102281'});
+					jQuery(".navbar a").css({'color':'#FFF'});
+					jQuery(".navbar").css({"box-shadow": "none"});
+					
+				}
+				else {
+					jQuery(".navbar").css({'background-color':"#FFF"});
+					jQuery(".navbar a").css({'color':'#000'});
+					jQuery(".navbar").css({"box-shadow": "0px 2px 1px grey"});
+					
+				}
+			});
+			jQuery('.opener1').click(function(){
+				jQuery(".partholder1").show("slow", "swing");
+				jQuery(".partholder1").css({"width":"100%"});
+				jQuery(".partholder1").css({"height":"90%"});
+				jQuery(".opener1").hide();
+				jQuery(".closer1").show();
+			});
+			jQuery('.opener2').click(function(){
+				jQuery(".partholder2").show("fast", "swing");
+				jQuery(".opener2").hide();
+				jQuery(".closer2").show();
+
+			});
+			jQuery('.closer1').click(function(){
+				jQuery(".partholder1").hide("fast", "swing");
+				jQuery(".opener1").show();
+				jQuery(".closer1").hide();
+			});
+			jQuery('.closer2').click(function(){
+				jQuery(".partholder2").hide("fast", "swing");
+				jQuery(".opener2").show();
+				jQuery(".closer2").hide();
+			});
+			jQuery('.opener3').click(function(){
+				jQuery(".partholder3").show("fast", "swing");
+				jQuery(".opener3").hide();
+				jQuery(".closer3").show();
+
+			});
+			jQuery('.closer3').click(function(){
+				jQuery(".partholder3").hide("fast", "swing");
+				jQuery(".opener3").show();
+				jQuery(".closer3").hide();
+			});
+		</script>
+		<script type="text/javascript">
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("slide");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1} 
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none"; 
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block"; 
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
+		<script type="text/javascript">
+
+			jQuery('.arrow font').animate({'color':'#ff5252'}, 1000, 'swing');
+			
+			jQuery('a').on('click',function(e){
+			   	e.preventDefault();
+			    var target = this.hash,
+			    jQuerytarget = jQuery(target);
+			    jQuery('html, body').stop().animate({'scrollTop': jQuerytarget.offset().top}, 500, 'swing', function (){
+			    	window.location.hash = target;
+			  });
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,296 @@
+body{
+	display: inline-grid;
+	scroll-behavior: smooth;
+	margin: 0;
+	max-width: 100%;
+	overflow: visible;
+	overflow-x: hiddejhlkjn;
+}
+
+section {
+	padding-top: 50px;
+	padding-left: 10px;
+}
+
+.navbar {
+	width: 100%;
+	overflow: hidden;
+	font-family: 'Montserrat';
+	font-weight: 100;
+	padding: 1px;
+	position: fixed;
+}
+
+.navbar .mainheading {
+	font-family: Major Mono Display;
+	color: #ff5252;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 25px;
+	margin-bottom: 1px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 25px;
+	transition: 0.25s
+}
+
+.navbar .mainheading:hover {
+	color: #fff;
+}
+
+.navbar a {
+	font-family: Raleway;
+	display: inline-grid;
+	padding: 10px;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	transition: 0.25s
+}
+
+#landing {
+	background-color: #102281;
+	justify-content: center;
+	text-align: center;
+	font-family: Montserrat;
+	min-height: 100%;
+}
+
+#landing .heading {
+	font-size: 6rem;
+	font-family: Major Mono Display;
+	color: #C3C8E0;
+}
+
+#landing h3{
+	color: #DDD;
+	font-weight: bold;
+	font-family: Roboto;
+	padding: 20px;
+	font-size: 3rem;
+}
+
+.arrow {
+	position: static;
+	align-content: center;
+	text-decoration: none;
+	display: inline-grid;
+	padding: 5px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transition: 0.5s;
+	font-family: Major Mono Display;
+	font-size: 5rem;
+}
+
+.arrow:hover{
+	border-color: #FFF;
+}
+
+#about {
+	background-color: #FFF;
+}
+
+#about .holder{
+	padding: 10px;
+	color: #000080;
+	font-size: 1.5rem;
+	text-align: justify;
+	font-family: Roboto;
+	font-weight: 300;
+	line-height: 50px;
+	
+}
+
+#parts {
+	background-color: #102281;
+	font-family: Roboto;
+	color:#FFF;
+}
+
+#parts h2{
+	padding: 40px;
+	justify-content: center;
+}
+
+.exp {
+	font-size: 1.25rem;
+	font-style: thin;
+	padding: 10px;
+	display: inline-block;
+}
+
+.part h2{
+	font-size: 1.3rem;
+	border-radius: 2px;
+}
+
+.part h2:hover {
+	background-color: #101070;
+	font-size: 1.4rem;
+	transition: 0.5s;
+}
+
+#compare {
+	color: #FFF;
+	font-family: Roboto;
+	border-width: 0.5px;
+	border-style: double;
+	padding: 10px;
+	text-align: center;
+	border-color: #B22222;
+}
+
+#compare th {
+	font-family: montserrat;
+	border-width: 0.5px;
+	padding: 15px;
+}
+
+#dyk {
+	margin-bottom: 20px;
+	margin-right: 20px;
+	font-size: 1.5rem;
+}
+
+.info {
+	color: #fff;
+	text-align: center;
+	font-size: 1rem;
+	margin-right: 20px;
+}
+
+.demo {
+	margin: 30px;
+}
+
+.opener1 {
+	display: inline-grid;
+	cursor: pointer;
+}
+
+.opener2 {
+	display: inline-grid;
+	cursor: pointer;
+}
+
+.opener3 {
+	display: inline-grid;
+	cursor: pointer;
+}
+
+.partholder1 {
+	padding: 10px;
+	border-style: inset;
+	border-width: 1px
+	border-color: #FFF;
+	border-radius: 2px;
+}
+
+.partholder2 {
+	padding: 10px;
+	border-style: double;
+	border-width: 1px
+	border-color: #FFF;
+	border-radius: 2px;
+}
+
+.partholder3 {
+	padding: 10px;
+	border-style: double;
+	border-width: 1px
+	border-color: #FFF;
+	border-radius: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.slideshow-container {
+	position: static;
+  	max-width: 1000px;
+  	margin: auto;
+
+}
+
+.slides {
+  	display: none;
+}
+
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+#advert {
+	font-family: Raleway;
+	min-height: 100vh;
+	background-color: #FFF;
+	padding: 50px;
+	position: static;
+}
+
+.quotes {
+	padding: 25px;
+	margin: 25px;
+}
+
+.quotes h3 {
+	text-align: right;
+}
+
+#disclaimer {
+	padding: 25px;
+	color: #ff5252;
+	position: sticky;
+	background-color: #fff;
+	font-weight: bolder;
+}
