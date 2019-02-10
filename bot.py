@@ -31,13 +31,13 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith(BOT_PREFIX + 'help'):
-        msg = '''
+        msg = ('''
         The commands available are:
             `%shello` : Greets the user
             `%sileftfortnite` : Well, try it
             `%srank` : Please don't try it now
             `%seightball` : Answers a simple Yes/No question
-        '''.format(BOT_PREFIX)
+        ''' %BOT_PREFIX)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith(BOT_PREFIX + 'mute'):
@@ -46,7 +46,7 @@ async def on_message(message):
 
     if message.content.startswith(BOT_PREFIX + 'unmute'):
         unmuted = message.raw_mentions
-        await client.remove_roles(unmted, discord.utils.get(message.server.roles, name='Muted'))
+        await client.remove_roles(muted, discord.utils.get(message.server.roles, name='Muted'))
 
     if message.content.startswith(BOT_PREFIX + 'autism'):
         cont = message.content.split(" ")
@@ -74,10 +74,6 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-
-@client.command(name='9gag', description='Sends a pic with the specified tag')
-async def ninegag(call):
-    pass
 
 
 client.run(TOKEN)
