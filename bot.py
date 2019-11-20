@@ -11,7 +11,6 @@ BOT_PREFIX = "/"
 TOKEN = 'NDkwNDQyNDg3ODQ0ODMxMjQ5.XdUjBQ.W3tF180dhyrwTQKdbwI7aPUAh5U'
 
 client = Bot(command_prefix=BOT_PREFIX)
-server_id = 631064048947167242
 muted = []
 
 conn = psycopg2.connect(dbname="node", user="postgres", password="123456")
@@ -38,7 +37,15 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-
+@client.command
+async def initranks(ctx):
+    server_name = ctx.guild
+    cur.execute("CREATE TABLE %s (name, points)" % server_name)
+    for member in ctx.guild.members:
+        cur.execute("INSERT INTO %s (name, points) values (%s, 0)" % (server_name, member.name))
+        conn.commit()
+        print("ok")
+    ctx.message.channel.send("Initialized ranking system")
 
 @client.event
 async def on_message(message):
