@@ -1,4 +1,4 @@
 # python-bot
 
 
-## Discord Server[https://discord.gg/EAVSHYh]
+## [Discord Server](https://discord.gg/EAVSHYh)
