@@ -1,28 +1,34 @@
 import random
 import discord
 from discord.ext.commands import Bot
+from discord.ext import commands
+from discord.utils import get
 import psycopg2
 
 
 BOT_PREFIX = "/"
 
-TOKEN = 'NDkwNDQyNDg3ODQ0ODMxMjQ5.Dn5YHw.MW82PBMnAxm3QnhCON3-Q4WB_jA'
+TOKEN = 'NDkwNDQyNDg3ODQ0ODMxMjQ5.XdUjBQ.W3tF180dhyrwTQKdbwI7aPUAh5U'
 
 client = Bot(command_prefix=BOT_PREFIX)
 server_id = 631064048947167242
-
 muted = []
 
-ranks = {}
 conn = psycopg2.connect(dbname="node", user="postgres", password="123456")
 cur = conn.cursor()
-cur.execute("SELECT name, awards_won FROM members ORDER BY awards_won DESC")
-god = cur.fetchall()
 
+def retrieve_ranks(person):
+    if person == "none":
+        cur.execute("SELECT name, awards_won FROM members ORDER BY awards_won DESC")
+        a = cur.fetchall()
+    else:
+        cur.execute("SELECT name, awards_won FROM members WHERE name='%s' ORDER BY awards_won DESC" % person)
+        a = cur.fetchall()
+    return a
 
-'''for member in server_members:
-        if member.nick == god:
-            client.add_roles(member, discord.utils.get(server.Server.roles, name="God"))'''
+def bump(person):
+    score = retrieve_ranks(person)[0][1] + 1
+    cur.execute("UPDATE members SET awards_won = %d WHERE name='%s'" % (score, person))
 
 @client.event
 async def on_message(message):
@@ -35,48 +41,46 @@ async def on_message(message):
     if message.content.startswith(BOT_PREFIX + 'eightball'):
         responses = ["Yes", "No", "Don't count on it...", "Chances are high...", "50/50, I'd say"]
         msg = (random.choice(responses) + ', ' + '{0.author.mention}!').format(message)
-        await message.channel.send(sage.channel, msg)
+        await message.channel.send(msg)
 
     if message.content.startswith(BOT_PREFIX + 'ileftfortnite'):
         msg = 'Wow {0.author.mention}! You increased your chances of getting laid by 1%!'.format(message)
         await message.channel.send(msg)
+    if message.content.startswith(BOT_PREFIX + 'bump'):
+        person = message.mentions[0].nick
+        bump(person)
+        await message.channel.send(person + " has been bumped")
+    if message.content.startswith(BOT_PREFIX + 'ur'):
+        for member in guild.members:
+            if member.nick == god[0][0]:
+                god_member = member
+                role = get(god_member.guild.roles, name="God")
+                await god_member.add_roles(role)
     if message.content.startswith(BOT_PREFIX + 'rank'):
+        god = retrieve_ranks("none")
         msg = ""
         for guild in client.guilds:
             godman = god[0][0]
             for member in guild.members:
                 for i in god:
                     if i[0] == member.nick:
-                        msg+=  member.name + " " + str(i[1]) + "\n"
-                if member.nick in god:
-                    await client.add_roles(member, discord.utils.get(message.server.roles, name="God"))
-
-            
-
+                        msg+=  member.name + " : " + str(i[1]) + "\n"
+                if member.nick == god[0][0]:
+                    god_member = member
+                    role = get(god_member.guild.roles, name="God")
+                    await god_member.add_roles(role)
         await message.channel.send(msg)
-    if message.content.startswith(BOT_PREFIX + 'comms'):
-        msg = '''
-        The commands available are:
-            `hello` : Greets the user
-            `ileftfortnite` : Well, try it
-            `rank` : Please don't try it now
-            `eightball` : Answers a simple Yes/No question
-        '''
-        await message.channel.send(msg)
-
-    if message.content.startswith(BOT_PREFIX + 'rank'):
-        msg = 'Sorry, but ranking other than MEE6 is still under development!'
-        await client.send_message(message.channel, msg)
 
     if message.content.startswith(BOT_PREFIX + 'help'):
         msg = ('''
         The commands available are:
             `%shello` : Greets the user
             `%sileftfortnite` : Well, try it
+            `%sbump @person`: Increases a person's rank
             `%srank` : Please don't try it now
             `%seightball` : Answers a simple Yes/No question
-        ''' %BOT_PREFIX)
-        await client.send_message(message.channel, msg)
+        ''' % BOT_PREFIX, BOT_PREFIX, BOT_PREFIX, BOT_PREFIX)
+        await message.channel.send(msg)
 
     if message.content.startswith(BOT_PREFIX + 'autism'):
         cont = message.content.split(" ")
@@ -92,11 +96,10 @@ async def on_message(message):
         await message.channel.send(x)
 
     if message.content.upper() == "ALEXA, PLAY DESPACITO" or message.content.upper() == "ALEXA PLAY DESPACITO":
-        await client.send_message(message.channel, 'https://www.youtube.com/watch?v=kJQP7kiw5Fk')
-        await client.send_message(message.channel, 'Want me to sing?')
-        if 'yes' in message.content.upper():
-            await client.send_message(message.channel, '''Despacito Quiero respirar tu cuello despacito Deja que te diga cosas al oído Para que te acuerdes si no estás conmigo Despacito Quiero desnudarte a besos despacito Firmo en las paredes de tu laberinto''', tts=True)
-
+        await message.channel.send('https://www.youtube.com/watch?v=kJQP7kiw5Fk')
+        await message.channel.send('Want me to sing?')
+        if 'YES' in message.content.upper():
+            await message.channel.send('''Despacito Quiero respirar tu cuello despacito Deja que te diga cosas al oído Para que te acuerdes si no estás conmigo Despacito Quiero desnudarte a besos despacito Firmo en las paredes de tu laberinto''', tts=True)
 
 @client.event
 async def on_ready():
@@ -104,4 +107,4 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    client.run(TOKEN)
+client.run(TOKEN)   
