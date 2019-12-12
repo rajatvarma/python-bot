@@ -62,19 +62,22 @@ async def on_message(message):
         msg = 'Wow {0.author.mention}! You increased your chances of getting laid by 1%!'.format(message)
         await message.channel.send(msg)
     if message.content.startswith(BOT_PREFIX + 'bump'):
-        person = message.mentions[0].nick
-        bump(person)
-        god = retrieve_ranks("")
-        for guild in client.guilds:
-            for member in guild.members:
-                for role in member.roles:
-                    if role.name == "God":
-                        await member.remove_roles(get(member.guild.roles, name="God"))
-                if member.nick == god[0][0]:
-                    god_member = member
-                    role = get(god_member.guild.roles, name="God")
-                    await god_member.add_roles(role)
-        await message.channel.send(person + " has been bumped")
+        if message.mentions[0] == message.author:
+            await message.channel.send("You can't bump yourself, silly!")
+        else:
+            person = message.mentions[0].nick
+            bump(person)
+            god = retrieve_ranks("")
+            for guild in client.guilds:
+                for member in guild.members:
+                    for role in member.roles:
+                        if role.name == "God":
+                            await member.remove_roles(get(member.guild.roles, name="God"))
+                    if member.nick == god[0][0]:
+                        god_member = member
+                        role = get(god_member.guild.roles, name="God")
+                        await god_member.add_roles(role)
+            await message.channel.send(person + " has been bumped")
     if message.content.startswith(BOT_PREFIX + 'rank'):
         god = retrieve_ranks("")
         msg = ""
