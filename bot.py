@@ -8,8 +8,6 @@ import psycopg2
 
 BOT_PREFIX = "/"
 
-TOKEN = 'NDkwNDQyNDg3ODQ0ODMxMjQ5.XdUjBQ.W3tF180dhyrwTQKdbwI7aPUAh5U'
-
 client = Bot(command_prefix=BOT_PREFIX)
 muted = []
 
